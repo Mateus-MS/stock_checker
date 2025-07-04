@@ -1,0 +1,35 @@
+package test_page_mob
+
+templ TestPage(name string) {
+    <!DOCTYPE html>
+    <html>
+    @head()
+    <body>
+        <h1>Wecome to test page</h1>
+        <p>I'm just testing</p>
+    </body>
+    </html>
+}
+
+templ head() {
+    <head>
+        <base href="/frontend/mobile/src/">
+        // To test if the url replacement is working
+        <script>
+            fetch("http://localhost:3000/api/test")
+            .then(
+                result => {
+                    console.log(result)
+                }
+            )
+            .catch(
+                result => {
+                    console.log(result)
+                }
+            )
+        </script>
+        
+        <title>Test page</title>
+        <link rel="stylesheet" type="text/css" href="/static/main.css">
+    </head>
+}

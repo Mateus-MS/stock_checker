@@ -1,0 +1,8 @@
+tmp
+backend/test
+frontend/mobile/src/sass
+frontend/desktop/src/sass
+.gitkeep
+
+# this will be ignored because will be copyied by minifying process
+frontend/mobile/src/js
