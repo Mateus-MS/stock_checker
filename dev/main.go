@@ -3,9 +3,10 @@ package main
 import (
 	"flag"
 	"net/http"
-	_ "placeholder/dev/backend/routes/pages"
-	"placeholder/dev/features/app"
-	"placeholder/dev/features/middlewares"
+
+	_ "github.com/Mateus-MS/stock_checker/dev/backend/routes/api/spreadsheet"
+	"github.com/Mateus-MS/stock_checker/dev/features/app"
+	"github.com/Mateus-MS/stock_checker/dev/features/middlewares"
 )
 
 func main() {

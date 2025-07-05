@@ -6,8 +6,8 @@ import (
 	"sync"
 )
 
-var app_instance *Application
-var app_once sync.Once
+var instance *Application
+var once sync.Once
 
 type Application struct {
 	DB     *sql.DB
@@ -15,10 +15,10 @@ type Application struct {
 }
 
 func GetInstance() *Application {
-	app_once.Do(func() {
-		app_instance = newApplication()
+	once.Do(func() {
+		instance = newApplication()
 	})
-	return app_instance
+	return instance
 }
 
 func newApplication() *Application {
@@ -30,7 +30,7 @@ func newApplication() *Application {
 
 	// Return the application instance
 	return &Application{
-		// DB:     GetInstance(),
+		DB:     StartDBConnection(),
 		Router: &router,
 	}
 }

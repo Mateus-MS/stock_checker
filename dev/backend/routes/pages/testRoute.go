@@ -2,8 +2,8 @@ package routes_pages
 
 import (
 	"net/http"
-	app "placeholder/dev/features/app"
-	test_page_mob "placeholder/dev/frontend/desktop/pages/test_page"
+	app "github.com/Mateus-MS/stock_checker/dev/features/app"
+	test_page_mob "github.com/Mateus-MS/stock_checker/dev/frontend/desktop/pages/test_page"
 	"strings"
 )
 

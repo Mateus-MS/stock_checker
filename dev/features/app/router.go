@@ -2,7 +2,7 @@ package app
 
 import (
 	"net/http"
-	middleware "placeholder/dev/features/middlewares"
+	middleware "github.com/Mateus-MS/stock_checker/dev/features/middlewares"
 	"strings"
 )
 
